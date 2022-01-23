@@ -1,0 +1,93 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha(){
+
+		document.write("<br><br>");
+	}	
+
+	function mostra(frase){
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var pesoJoaquin = 81.6;
+	var alturaJoaquin = 1.73;
+	var imcJoaquin = Math.round(pesoJoaquin / (alturaJoaquin * alturaJoaquin));
+	mostra ("O IMC de Joaquin é " + imcJoaquin)
+
+	var pesoAmigo = 77.6;
+	var alturaAmigo = 1.83;
+	var imcAmigo = Math.round(pesoAmigo / (alturaAmigo * alturaAmigo));
+	mostra ("O IMC de Amigo é " + imcAmigo)
+
+	function calculaImc(altura, peso){
+
+		var imc = Math.round(peso / (altura * altura));
+		mostra ("O imc calculado é " + imc)
+	}
+
+	calculaImc(1.74, 81.6)
+	calculaImc(1.83, 77.6)
+
+	function calculaImc(altura, peso){
+
+		var imc = Math.round(peso / (altura * altura));
+		return imc;
+	}
+
+	imcJoaquin = calculaImc(1.74, 81.6)
+	imcAmigo = calculaImc(1.83, 77.6)
+
+	mostra(imcJoaquin)
+	mostra(imcAmigo)
+
+	function calculaImc(altura, peso){
+
+		return Math.round(peso / (altura * altura));
+		}
+	
+	imcJoaquin = calculaImc(1.74, 81.6)
+	imcAmigo = calculaImc(1.83, 77.6)
+	var totalImc = imcJoaquin + imcAmigo
+	
+	document.write("A soma dos imc´s é " + totalImc)
+
+
+	function calculaImc(altura, peso){
+
+		return Math.round(peso / (altura * altura));
+		}
+
+	document.write("<br><br>");
+	
+	var nome = prompt ("Informe seu nome");
+	var alturaInformada = prompt (nome + " Informe sua altura");
+	var pesoInformado = prompt (nome + " Informe seu peso");
+	
+	imc = calculaImc (alturaInformada, pesoInformado);
+	
+	document.write(nome + " seu imc é " + imc);
+
+	document.write("<br><br>");
+
+	if(imc < 18.5){
+		
+		mostra("Você esta abaixo do recomendado.");
+
+	}
+	if(imc > 35){
+
+		mostra("Você esta acima do recomendado.");
+
+	}
+	if(imc >= 18.5 && imc <= 35){
+		
+		mostra("O seu IMC está excelente!");
+
+	}
+	
+
+</script>

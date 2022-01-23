@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+
+
+<script type="text/javascript">
+	
+	//Calcular quantas gerações de brasileiros se passaram desde a chegada dos portugueses (ano 1500) até hoje, usando varíaveis e funções. Cada geração tem 28 anos
+
+
+ var anoAtual = 2022
+ var anoChegada = 1500
+ var quantidadeGeracoes = Math.round((anoAtual - anoChegada) / 28)
+
+ function pulaLinha(){
+
+ 	document.write("<br><br>")
+ }
+
+ function mostra(frase){
+
+ 	document.write(frase)
+ 	pulaLinha()
+ }
+
+ mostra("Os portugueses chegaram em " + anoChegada)
+
+ mostra("Estamos no ano " + anoAtual)
+
+ mostra("Já passaram " + quantidadeGeracoes + " gerações de brasileiros.")
+
+</script>
